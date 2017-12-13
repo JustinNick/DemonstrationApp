@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.it_ch.demonstrationapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.homepage.phonesubwayticket.PhoneActivity"/>
+        <activity android:name=".ui.activity.homepage.buyonline.BuyTicketActivity"/>
+        <activity android:name=".ui.activity.homepage.instationguide.GuideActivity"/>
+        <activity android:name=".ui.activity.homepage.realtime_traffic.RealTimeActivity"/>
+        <activity android:name=".ui.activity.homepage.buy_record.RecordActivity"/>
+        <activity android:name=".ui.activity.homepage.around_station.StationRimActivity"/>
+        <activity android:name=".ui.activity.homepage.lost_found.LostActivity"/>
+        <activity android:name=".ui.activity.homepage.operation_notice.InformActivity"/>
+        <activity android:name=".ui.activity.homepage.phonesubwayticket.AccountRechargeActivity"/>
+        <activity android:name=".ui.activity.homepage.phonesubwayticket.PayDialogActivity">
+        </activity>
+        <activity android:name=".ui.activity.homepage.phonesubwayticket.RechargeSuccessActivity">
+        </activity>
+        <activity android:name=".ui.activity.homepage.phonesubwayticket.TradingRecordActivity">
+        </activity>
+        <activity android:name=".ui.activity.homepage.buyonline.SureBuyTicketActivity">
+        </activity>
+        <activity android:name=".ui.activity.homepage.buyonline.BuyLineSuccessActivity">
+        </activity>
+        <activity android:name=".ui.activity.homepage.buyonline.TicketCodeActivity">
+        </activity>
+        <activity android:name=".ui.activity.homepage.instationguide.StandSureActivity">
+        </activity>
+        <activity android:name=".ui.activity.homepage.around_station.StationRimSureActivity">
+        </activity>
+        <activity android:name=".ui.activity.homepage.around_station.LandsmarkSureActivity">
+        </activity>
+    </application>
+
+</manifest>

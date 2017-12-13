@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@mipmap/user" />
+
+    <RelativeLayout
+        style="@style/user_fragment_rel">
+
+        <ImageView
+            android:id="@+id/msg_icon"
+            style="@style/user_list_image_left"
+            android:background="@mipmap/user1" />
+
+        <TextView
+            android:id="@+id/msg_text"
+            style="@style/user_list_text"
+            android:layout_toRightOf="@+id/msg_icon"
+            android:text="@string/msg_push"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/user_list_image_right"
+            android:background="@mipmap/switch_on" />
+    </RelativeLayout>
+
+    <include layout="@layout/cut_off_line"/>
+
+    <RelativeLayout
+        style="@style/user_fragment_rel">
+
+        <ImageView
+            android:id="@+id/notice_icon"
+            style="@style/user_list_image_left"
+            android:background="@mipmap/user2" />
+
+        <TextView
+            android:id="@+id/notice_text"
+            style="@style/user_list_text"
+            android:layout_toRightOf="@+id/notice_icon"
+            android:text="@string/riding_notice"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/user_list_image_right"
+            android:background="@mipmap/right" />
+    </RelativeLayout>
+
+    <include layout="@layout/cut_off_line"/>
+
+    <RelativeLayout
+        style="@style/user_fragment_rel">
+
+        <ImageView
+            android:id="@+id/order_icon"
+            style="@style/user_list_image_left"
+            android:background="@mipmap/user3" />
+
+        <TextView
+            android:id="@+id/order_text"
+            style="@style/user_list_text"
+            android:layout_toRightOf="@+id/order_icon"
+            android:text="@string/my_order"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/user_list_image_right"
+            android:background="@mipmap/right" />
+    </RelativeLayout>
+
+    <include layout="@layout/cut_off_line"/>
+
+    <RelativeLayout
+        style="@style/user_fragment_rel">
+
+        <ImageView
+            android:id="@+id/option_icon"
+            style="@style/user_list_image_left"
+            android:background="@mipmap/user4" />
+
+        <TextView
+            android:id="@+id/option_text"
+            style="@style/user_list_text"
+            android:layout_toRightOf="@+id/option_icon"
+            android:text="@string/option_feedback"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/user_list_image_right"
+            android:background="@mipmap/right" />
+    </RelativeLayout>
+
+    <include layout="@layout/cut_off_line"/>
+
+    <RelativeLayout
+        style="@style/user_fragment_rel">
+
+        <ImageView
+            android:id="@+id/line_icon"
+            style="@style/user_list_image_left"
+            android:background="@mipmap/user5" />
+
+        <TextView
+            android:id="@+id/line_text"
+            style="@style/user_list_text"
+            android:layout_toRightOf="@+id/line_icon"
+            android:text="@string/subway_line"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/user_list_image_right"
+            android:background="@mipmap/right" />
+    </RelativeLayout>
+
+    <include layout="@layout/cut_off_line"/>
+
+    <RelativeLayout
+        style="@style/user_fragment_rel">
+
+        <ImageView
+            android:id="@+id/about_me_icon"
+            style="@style/user_list_image_left"
+            android:background="@mipmap/user6" />
+
+        <TextView
+            android:id="@+id/about_me_text"
+            style="@style/user_list_text"
+            android:layout_toRightOf="@+id/about_me_icon"
+            android:text="@string/about_me"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/user_list_image_right"
+            android:background="@mipmap/right" />
+    </RelativeLayout>
+
+    <include layout="@layout/cut_off_line"/>
+
+    <RelativeLayout
+        style="@style/user_fragment_rel">
+
+        <ImageView
+            android:id="@+id/clean_icon"
+            style="@style/user_list_image_left"
+            android:background="@mipmap/user7" />
+
+        <TextView
+            android:id="@+id/clean_text"
+            style="@style/user_list_text"
+            android:layout_toRightOf="@+id/clean_icon"
+            android:text="@string/clear_cash"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/user_list_image_right"
+            android:background="@mipmap/right" />
+    </RelativeLayout>
+
+    <include layout="@layout/cut_off_line"/>
+
+</LinearLayout>

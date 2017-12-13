@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.homepage.phonesubwayticket.TradingRecordActivity">
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/layout_title"
+        android:fitsSystemWindows="true" />
+    <LinearLayout
+        android:id="@+id/ll_card"
+        android:layout_below="@+id/title_layout"
+        android:gravity="center_vertical"
+        android:background="@color/text_blue"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/text_gray1"
+            android:text="卡号 : 6222346565653      余额 : 182.00元"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/re_card_detail_show"
+        android:layout_below="@+id/ll_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

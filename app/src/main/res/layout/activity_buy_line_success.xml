@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.homepage.buyonline.BuyLineSuccessActivity">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/layout_title"
+        android:fitsSystemWindows="true"/>
+
+    <TextView
+        android:id="@+id/tv_pay_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/title_layout"
+        android:layout_margin="10dp"
+        android:text="@string/complete"
+        android:textColor="@color/text_blue"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_pay_success"
+        android:src="@mipmap/buylinesuccess"/>
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.homepage.phonesubwayticket.AccountRechargeActivity">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/layout_title"
+        android:fitsSystemWindows="true" />
+
+    <ImageView
+        android:id="@+id/iv_account_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/account_recharge" />
+    <TextView
+        android:id="@+id/recharge_money"
+        style="@style/pay_way"
+        android:text="@string/recharge_num"
+        android:layout_below="@+id/iv_account_recharge"/>
+    <TextView
+        style="@style/pay_way"
+        android:text="余额：128.00 元"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/iv_account_recharge"/>
+    <ImageView
+        android:id="@+id/money_num"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/recharge_money"
+        android:src="@mipmap/money_num"
+        android:scaleType="fitXY"/>
+    <View
+        android:id="@+id/div_money"
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/money_num"
+        android:background="@color/text_gray1" />
+    <TextView
+        android:id="@+id/pay_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_way"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/div_money"/>
+    <ImageView
+        android:id="@+id/iv_wxpay"
+        style="@style/pay_way"
+        android:src="@drawable/wxpay_selector"
+        android:layout_below="@+id/pay_way"/>
+    <ImageView
+        android:id="@+id/iv_alipay"
+        style="@style/pay_way"
+        android:src="@drawable/alipay_selector"
+        android:layout_below="@+id/pay_way"
+        android:layout_toRightOf="@+id/iv_wxpay"/>
+    <ImageView
+        android:id="@+id/iv_unionpay"
+        style="@style/pay_way"
+        android:src="@drawable/unionpay_selector"
+        android:layout_toRightOf="@+id/iv_alipay"
+        android:layout_below="@+id/pay_way"/>
+    <Button
+        android:id="@+id/btn_go_buy"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/iv_wxpay"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="18sp"
+        android:background="@mipmap/btn_buy"
+        android:textColor="@color/text_gray1"
+        android:text="@string/go_buy" />
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@mipmap/banner" />
+
+    <RelativeLayout
+        android:id="@+id/rl_items"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#FFFFFF"
+        android:layout_below="@+id/iv_banner">
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawablePadding="6dp"
+            android:drawableTop="@mipmap/home1"
+            android:paddingLeft="10dp"
+            android:text="手机地铁票"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_buy_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawablePadding="6dp"
+            android:layout_toRightOf="@+id/tv_phone"
+            android:drawableTop="@mipmap/home2"
+            android:paddingLeft="12dp"
+            android:text="在线购票"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawablePadding="6dp"
+            android:layout_toRightOf="@+id/tv_buy_ticket"
+            android:drawableTop="@mipmap/home3"
+            android:paddingLeft="12dp"
+            android:text="站内向导"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_real_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawablePadding="6dp"
+            android:layout_toRightOf="@+id/tv_guide"
+            android:drawableTop="@mipmap/home4"
+            android:paddingLeft="12dp"
+            android:text="实时客流"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_phone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="6dp"
+            android:drawableTop="@mipmap/home5"
+            android:paddingLeft="16dp"
+            android:text="购票记录"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_station_rim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_buy_ticket"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="6dp"
+            android:layout_toRightOf="@+id/tv_record"
+            android:drawableTop="@mipmap/home6"
+            android:paddingLeft="12dp"
+            android:text="车站周边"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_lost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_guide"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="6dp"
+            android:layout_toRightOf="@+id/tv_station_rim"
+            android:drawableTop="@mipmap/home7"
+            android:paddingLeft="12dp"
+            android:text="失物招领"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_inform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_real_time"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="6dp"
+            android:layout_toRightOf="@+id/tv_lost"
+            android:drawableTop="@mipmap/home8"
+            android:paddingLeft="12dp"
+            android:text="运营通知"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/div_card_a"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_items"
+        android:background="@color/text_gray1" />
+
+    <ImageView
+        android:id="@+id/weather"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/div_card_a"
+        android:background="@mipmap/weather"
+        android:gravity="center" />
+</LinearLayout>

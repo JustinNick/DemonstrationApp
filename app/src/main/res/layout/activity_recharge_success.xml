@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.homepage.phonesubwayticket.RechargeSuccessActivity">
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/layout_title_recharge"
+        android:fitsSystemWindows="true"/>
+    <TextView
+        android:id="@+id/tv_recharge_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="充值成功"
+        android:textSize="20sp"
+        android:drawablePadding="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginTop="30dp"
+        android:drawableTop="@mipmap/recharge_success"/>
+    <View
+        android:id="@+id/div_card_a"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/tv_recharge_success"
+        android:background="@color/text_gray" />
+    <TextView
+        android:id="@+id/tv_balance_befor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/div_card_a"
+        android:text="充前余额 : 128.00"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tv_balance_later"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/tv_balance_befor"
+        android:text="当前余额 : 178.00"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tv_card_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/tv_balance_later"
+        android:text="充值卡号 : 6220039203358"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tv_trading_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/tv_card_num"
+        android:text="交易时间 : 2017-10-13 15:56:32"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

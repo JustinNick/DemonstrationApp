@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.homepage.phonesubwayticket.PhoneActivity">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/layout_title"
+        android:fitsSystemWindows="true" />
+
+    <ImageView
+        android:id="@+id/iv_card"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@mipmap/account_virtual" />
+
+    <ImageView
+        android:id="@+id/iv_card_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/iv_card"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/operation"
+        android:clickable="true" />
+
+    <View
+        android:id="@+id/div_card_a"
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:layout_below="@id/iv_card_operation"
+        android:background="@color/text_gray1" />
+
+    <TextView
+        android:id="@+id/tv_card_num"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/div_card_a"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:text="卡号：622258558656555" />
+
+    <Button
+        android:id="@+id/btn_card_detail"
+        android:layout_width="50dp"
+        android:layout_height="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/div_card_a"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/detail"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/div_card"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/tv_card_num"
+        android:background="@color/text_gray1" />
+
+    <TextView
+        android:id="@+id/tv_card_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/div_card"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:text="余额：128元 " />
+
+    <Button
+        android:id="@+id/btn_card_recharge"
+        android:layout_width="50dp"
+        android:layout_height="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/div_card"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/recharge" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/tv_card_balance"
+        android:background="@color/text_gray1" />
+
+</RelativeLayout>
