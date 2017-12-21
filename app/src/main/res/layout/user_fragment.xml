@@ -4,13 +4,58 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:background="@mipmap/user" />
-
     <RelativeLayout
-        style="@style/user_fragment_rel">
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@mipmap/account_back" />
+
+        <ImageView
+            android:id="@+id/account_user_img"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/user" />
+
+        <TextView
+            android:id="@+id/tv_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_user_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:text="18701003420"
+            android:textSize="18sp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_user_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="余额 ：286元"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_user_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="30dp"
+            android:text="积分 ：1386分"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout style="@style/user_fragment_rel">
 
         <ImageView
             android:id="@+id/msg_icon"
@@ -29,10 +74,9 @@
             android:background="@mipmap/switch_on" />
     </RelativeLayout>
 
-    <include layout="@layout/cut_off_line"/>
+    <include layout="@layout/cut_off_line" />
 
-    <RelativeLayout
-        style="@style/user_fragment_rel">
+    <RelativeLayout style="@style/user_fragment_rel">
 
         <ImageView
             android:id="@+id/notice_icon"
@@ -48,13 +92,12 @@
 
         <ImageView
             style="@style/user_list_image_right"
-            android:background="@mipmap/right" />
+            android:background="@mipmap/right_back" />
     </RelativeLayout>
 
-    <include layout="@layout/cut_off_line"/>
+    <include layout="@layout/cut_off_line" />
 
-    <RelativeLayout
-        style="@style/user_fragment_rel">
+    <RelativeLayout style="@style/user_fragment_rel">
 
         <ImageView
             android:id="@+id/order_icon"
@@ -70,13 +113,12 @@
 
         <ImageView
             style="@style/user_list_image_right"
-            android:background="@mipmap/right" />
+            android:background="@mipmap/right_back" />
     </RelativeLayout>
 
-    <include layout="@layout/cut_off_line"/>
+    <include layout="@layout/cut_off_line" />
 
-    <RelativeLayout
-        style="@style/user_fragment_rel">
+    <RelativeLayout style="@style/user_fragment_rel">
 
         <ImageView
             android:id="@+id/option_icon"
@@ -92,13 +134,12 @@
 
         <ImageView
             style="@style/user_list_image_right"
-            android:background="@mipmap/right" />
+            android:background="@mipmap/right_back" />
     </RelativeLayout>
 
-    <include layout="@layout/cut_off_line"/>
+    <include layout="@layout/cut_off_line" />
 
-    <RelativeLayout
-        style="@style/user_fragment_rel">
+    <RelativeLayout style="@style/user_fragment_rel">
 
         <ImageView
             android:id="@+id/line_icon"
@@ -114,13 +155,12 @@
 
         <ImageView
             style="@style/user_list_image_right"
-            android:background="@mipmap/right" />
+            android:background="@mipmap/right_back" />
     </RelativeLayout>
 
-    <include layout="@layout/cut_off_line"/>
+    <include layout="@layout/cut_off_line" />
 
-    <RelativeLayout
-        style="@style/user_fragment_rel">
+    <RelativeLayout style="@style/user_fragment_rel">
 
         <ImageView
             android:id="@+id/about_me_icon"
@@ -136,13 +176,12 @@
 
         <ImageView
             style="@style/user_list_image_right"
-            android:background="@mipmap/right" />
+            android:background="@mipmap/right_back" />
     </RelativeLayout>
 
-    <include layout="@layout/cut_off_line"/>
+    <include layout="@layout/cut_off_line" />
 
-    <RelativeLayout
-        style="@style/user_fragment_rel">
+    <RelativeLayout style="@style/user_fragment_rel">
 
         <ImageView
             android:id="@+id/clean_icon"
@@ -158,9 +197,9 @@
 
         <ImageView
             style="@style/user_list_image_right"
-            android:background="@mipmap/right" />
+            android:background="@mipmap/right_back" />
     </RelativeLayout>
 
-    <include layout="@layout/cut_off_line"/>
+    <include layout="@layout/cut_off_line" />
 
 </LinearLayout>

@@ -36,7 +36,7 @@
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/div_card_a"
         android:text="充前余额 : 128.00"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/tv_balance_later"
         android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/tv_balance_befor"
         android:text="当前余额 : 178.00"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/tv_card_num"
         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/tv_balance_later"
         android:text="充值卡号 : 6220039203358"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:id="@+id/tv_trading_hour"
         android:layout_width="wrap_content"
@@ -63,6 +63,6 @@
         android:layout_marginLeft="20dp"
         android:layout_below="@+id/tv_card_num"
         android:text="交易时间 : 2017-10-13 15:56:32"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 
 </RelativeLayout>

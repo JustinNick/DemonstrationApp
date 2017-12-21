@@ -19,6 +19,8 @@ public class DataShowAdapter extends RecyclerView.Adapter<DataShowAdapter.MyView
     private View mHeaderView;
     public static final int TYPE_HEADER = 0;  //说明是带有Header的
     public static final int TYPE_NORMAL = 1;  //说明是不带有header和footer的
+    private int [] mImgs = new int[]{R.mipmap.icon_home,R.mipmap.icon_home1,R.mipmap.icon_home2,
+            R.mipmap.icon_home3,R.mipmap.icon_home4,R.mipmap.icon_home5,R.mipmap.icon_home6,};
 
     public DataShowAdapter(List<String> mlistDatas) {
         this.mlistDatas = mlistDatas;
@@ -55,6 +57,7 @@ public class DataShowAdapter extends RecyclerView.Adapter<DataShowAdapter.MyView
     public void onBindViewHolder(DataShowAdapter.MyViewHolder holder, int position) {
         if (getItemViewType(position) == TYPE_NORMAL && holder != null) {
             holder.tv_content.setText(mlistDatas.get(position - 1));
+            holder.iv_icon.setImageResource(mImgs[position%mImgs.length]);
         }
 
     }

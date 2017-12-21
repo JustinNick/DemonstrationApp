@@ -1,9 +1,12 @@
 package com.example.it_ch.demonstrationapp;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -21,8 +24,11 @@ import com.example.it_ch.demonstrationapp.ui.fragment.UserFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private LinearLayout ly_one, ly_two, ly_three, ly_four;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
+    private LinearLayout  ly_two, ly_three, ly_four;
     private TextView mTextView1, mTextView2, mTextView3, mTextView4;
     private TextView mTextNum1, mTextNum2, mTextNum3;
     private ImageView mImageView;
@@ -30,13 +36,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final long WAIT_TIME = 2000L;
     private long mExitTime;
 
+    @Bind(R.id.ly_tab_menu_homepage)
+    LinearLayout ly_one;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        immersion();
+        ButterKnife.bind(this);
         bindView();
         initEvents();
         ly_one.performClick();
+    }
+
+    private void immersion() {
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = getWindow().getDecorView();
+            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            decorView.setSystemUiVisibility(option);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
     }
 
     private void bindView() {
@@ -56,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mViewpager.setAdapter(myFragmentPagerAdapter);
         mViewpager.setCurrentItem(0);
 
-        ly_one = (LinearLayout) findViewById(R.id.ly_tab_menu_homepage);
+//        ly_one = (LinearLayout) findViewById(R.id.ly_tab_menu_homepage);
         ly_two = (LinearLayout) findViewById(R.id.ly_tab_menu_change);
         ly_three = (LinearLayout) findViewById(R.id.ly_tab_menu_life);
         ly_four = (LinearLayout) findViewById(R.id.ly_tab_menu_user);
@@ -78,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ly_two.setOnClickListener(this);
         ly_three.setOnClickListener(this);
         ly_four.setOnClickListener(this);
+        mViewpager.addOnPageChangeListener(this);
     }
 
     //重置所有文本的选中状态
@@ -131,5 +157,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+        if (state == 2) {
+            switch (mViewpager.getCurrentItem()) {
+                case 0:
+                    setSelected();
+                    mTextView1.setSelected(true);
+                    break;
+                case 1:
+                    setSelected();
+                    mTextView2.setSelected(true);
+                    break;
+                case 2:
+                    setSelected();
+                    mTextView3.setSelected(true);
+                    break;
+                case 3:
+                    setSelected();
+                    mTextView4.setSelected(true);
+                    mImageView.setVisibility(View.INVISIBLE);
+                    break;
+            }
+        }
+
     }
 }
