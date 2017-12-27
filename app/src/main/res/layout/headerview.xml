@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-    <FrameLayout
+    <RelativeLayout
+        android:background="@color/text_gray"
         android:layout_width="match_parent"
         android:layout_height="180dp">
         <com.youth.banner.Banner
@@ -17,9 +18,25 @@
             android:textColor="#ffffff"
             android:layout_marginTop="35dp"
             android:layout_marginLeft="20dp"/>
-    </FrameLayout>
-
-
+        <ImageView
+            android:id="@+id/iv_home_search_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search"
+            android:layout_marginTop="-10dp"
+            android:layout_alignTop="@+id/tv_home_search_ticket"
+            android:layout_toLeftOf="@+id/tv_home_search_ticket"/>
+        <TextView
+            android:id="@+id/tv_home_search_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验票"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="-5dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="35dp"/>
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_items"

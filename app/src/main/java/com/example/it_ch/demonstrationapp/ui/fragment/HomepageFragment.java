@@ -7,12 +7,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.it_ch.demonstrationapp.LinearLayoutManager;
 import com.example.it_ch.demonstrationapp.R;
 import com.example.it_ch.demonstrationapp.adapter.DataShowAdapter;
 import com.example.it_ch.demonstrationapp.adapter.MyReDecoration;
+import com.example.it_ch.demonstrationapp.ui.activity.homepage.SingleTicketTestActivity;
 import com.example.it_ch.demonstrationapp.ui.activity.homepage.around_station.StationRimActivity;
 import com.example.it_ch.demonstrationapp.ui.activity.homepage.buy_record.RecordActivity;
 import com.example.it_ch.demonstrationapp.ui.activity.homepage.buyonline.BuyTicketActivity;
@@ -44,6 +46,8 @@ public class HomepageFragment extends Fragment implements View.OnClickListener {
     private TextView mTvLost;
     private TextView mTvInform;
     private DataShowAdapter mDataShowAdapter;
+    private ImageView mIvSearchTicket;
+    private TextView mTvSearchTicket;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,6 +71,9 @@ public class HomepageFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initHeaderEvents(){
+        mIvSearchTicket.setOnClickListener(this);
+        mTvSearchTicket.setOnClickListener(this);
+
         mTvPhone.setOnClickListener(this);
         mTvBuyTicket.setOnClickListener(this);
         TmvGuide.setOnClickListener(this);
@@ -95,6 +102,9 @@ public class HomepageFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initHeaderView(View header) {
+        mIvSearchTicket = (ImageView) header.findViewById(R.id.iv_home_search_ticket);
+        mTvSearchTicket = (TextView) header.findViewById(R.id.tv_home_search_ticket);
+
         mTvPhone = (TextView) header.findViewById(R.id.tv_phone);
         mTvBuyTicket = (TextView) header.findViewById(R.id.tv_buy_ticket);
         TmvGuide = (TextView) header.findViewById(R.id.tv_guide);
@@ -108,6 +118,12 @@ public class HomepageFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.iv_home_search_ticket:
+                startActivity(new Intent(getActivity(),SingleTicketTestActivity.class));
+                break;
+                case R.id.tv_home_search_ticket:
+                startActivity(new Intent(getActivity(),SingleTicketTestActivity.class));
+                break;
             case R.id.tv_phone:
                 startActivity(new Intent(getActivity(),PhoneActivity.class));
                 break;
