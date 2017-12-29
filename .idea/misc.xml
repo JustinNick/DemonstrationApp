@@ -31,6 +31,23 @@
     <option name="id" value="Android" />
   </component>
   <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$/citycardlib">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="file:///D:/SVNProject/svn1/YongZhou/branches" />
+                  <option value="file:///D:/SVNProject/svn1/YongZhou/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="file:///D:/SVNProject/svn1/YongZhou/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
 </project>

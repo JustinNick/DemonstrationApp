@@ -63,7 +63,7 @@ public class SingleTicketTestActivity extends AppCompatActivity {
             Intent intent = new Intent(this,getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             pendingIntent = PendingIntent.getActivity(this.getBaseContext(),0,intent,0);
             mTagIntent = getIntent();
-            onNewIntent(getIntent());
+//            onNewIntent(getIntent());
         }
 
     }
@@ -111,7 +111,6 @@ public class SingleTicketTestActivity extends AppCompatActivity {
     public void onNewIntent(Intent intent) {
             Log.e(TAG,"接收到读卡动作");
             mTagIntent = intent;
-            //2155常熟
             NFCCardManager.initNFCCard(mTagIntent,CITY_CODE,null);
             showNFCData();
     }

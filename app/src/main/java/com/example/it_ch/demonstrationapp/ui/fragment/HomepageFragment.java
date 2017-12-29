@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.it_ch.demonstrationapp.LinearLayoutManager;
 import com.example.it_ch.demonstrationapp.R;
@@ -20,7 +21,6 @@ import com.example.it_ch.demonstrationapp.ui.activity.homepage.buy_record.Record
 import com.example.it_ch.demonstrationapp.ui.activity.homepage.buyonline.BuyTicketActivity;
 import com.example.it_ch.demonstrationapp.ui.activity.homepage.instationguide.GuideActivity;
 import com.example.it_ch.demonstrationapp.ui.activity.homepage.lost_found.LostActivity;
-import com.example.it_ch.demonstrationapp.ui.activity.homepage.operation_notice.InformActivity;
 import com.example.it_ch.demonstrationapp.ui.activity.homepage.phonesubwayticket.PhoneActivity;
 import com.example.it_ch.demonstrationapp.ui.activity.homepage.realtime_traffic.RealTimeActivity;
 import com.example.it_ch.demonstrationapp.utils.GlideImageLoader;
@@ -146,7 +146,7 @@ public class HomepageFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(),LostActivity.class));
                 break;
             case R.id.tv_inform:
-                startActivity(new Intent(getActivity(),InformActivity.class));
+                Toast.makeText(getActivity(),"此功能正在抓紧开发中....",Toast.LENGTH_SHORT).show();
                 break;
         }
     }

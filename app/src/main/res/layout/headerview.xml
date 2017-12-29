@@ -162,10 +162,4 @@
         android:layout_below="@+id/div_card_a"
         android:background="@mipmap/weather"
         android:gravity="center" />
-    <TextView
-        android:id="@+id/tv_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试Eventbus"
-        android:layout_gravity="center_horizontal"/>
 </LinearLayout>

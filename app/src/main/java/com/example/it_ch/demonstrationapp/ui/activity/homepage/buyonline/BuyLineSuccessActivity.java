@@ -3,20 +3,17 @@ package com.example.it_ch.demonstrationapp.ui.activity.homepage.buyonline;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.it_ch.demonstrationapp.R;
 
 public class BuyLineSuccessActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private ImageView mIvBack;
-    private TextView mTvTitle;
-    private TextView mTvPaySuccess;
+    private View mIvBack;
+    private View mTvPaySuccess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +27,11 @@ public class BuyLineSuccessActivity extends AppCompatActivity implements View.On
     private void initEvents() {
         mIvBack.setOnClickListener(this);
         mTvPaySuccess.setOnClickListener(this);
-        mTvTitle.setText("在线购票");
     }
 
     private void initViews() {
-        mIvBack = (ImageView) findViewById(R.id.iv_left_back);
-        mTvTitle = (TextView) findViewById(R.id.tv_title_bar);
-        mTvPaySuccess = (TextView) findViewById(R.id.tv_pay_success);
+        mIvBack = findViewById(R.id.iv_left_back);
+        mTvPaySuccess = findViewById(R.id.complete_buy);
     }
 
     private void immersion() {
@@ -56,7 +51,7 @@ public class BuyLineSuccessActivity extends AppCompatActivity implements View.On
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.tv_pay_success:
+            case R.id.complete_buy:
                 startActivity(new Intent(this,TicketCodeActivity.class));
                 finish();
                 break;

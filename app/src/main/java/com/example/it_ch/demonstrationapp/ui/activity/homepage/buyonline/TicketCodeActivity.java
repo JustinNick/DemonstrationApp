@@ -6,16 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.it_ch.demonstrationapp.R;
 
 public class TicketCodeActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private ImageView mIvBack;
-    private TextView mTvTitle;
-    private TextView mTvPaySuccess;
+    private View mIvBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +25,10 @@ public class TicketCodeActivity extends AppCompatActivity implements View.OnClic
 
     private void initEvents() {
         mIvBack.setOnClickListener(this);
-        mTvTitle.setText("在线购票");
     }
 
     private void initViews() {
-        mIvBack = (ImageView) findViewById(R.id.iv_left_back);
-        mTvTitle = (TextView) findViewById(R.id.tv_title_bar);
+        mIvBack = findViewById(R.id.iv_left_back);
     }
 
     private void immersion() {

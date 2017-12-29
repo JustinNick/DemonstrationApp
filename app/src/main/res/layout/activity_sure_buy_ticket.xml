@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.homepage.buyonline.SureBuyTicketActivity">
+    tools:context=".ui.activity.homepage.phonesubwayticket.PhoneActivity">
     <ImageView
-        android:id="@+id/iv_pay_instant"
-        android:layout_below="@+id/title_layout"
+        android:id="@+id/iv_ticket_line"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/surebuy"
+        android:src="@mipmap/onlinebuy2"
         android:scaleType="fitXY"/>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60px"
+        android:background="#394049"/>
+    <View
+        android:id="@+id/btn_go_buy"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

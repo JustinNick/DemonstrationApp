@@ -7,17 +7,13 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.it_ch.demonstrationapp.R;
 
 public class BuyTicketActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button mBtnTicket;
-    private ImageView mIvBack;
-    private TextView mTvTitle;
+    private View mBtnTicket;
+    private View mIvBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +27,11 @@ public class BuyTicketActivity extends AppCompatActivity implements View.OnClick
     private void initEvents() {
         mIvBack.setOnClickListener(this);
         mBtnTicket.setOnClickListener(this);
-        mTvTitle.setText("在线购票");
     }
 
     private void initViews() {
-        mBtnTicket = (Button) findViewById(R.id.btn_go_buy);
-        mIvBack = (ImageView) findViewById(R.id.iv_left_back);
-        mTvTitle = (TextView) findViewById(R.id.tv_title_bar);
+        mBtnTicket = findViewById(R.id.btn_go_buy);
+        mIvBack = findViewById(R.id.iv_left_back);
     }
 
     private void immersion() {
