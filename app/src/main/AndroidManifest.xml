@@ -7,6 +7,11 @@
 
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +21,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
@@ -36,16 +41,17 @@
         <activity android:name=".ui.activity.homepage.lost_found.LostActivity" />
         <activity android:name=".ui.activity.homepage.operation_notice.InformActivity" />
         <activity android:name=".ui.activity.homepage.phonesubwayticket.AccountRechargeActivity" />
-        <activity android:name=".ui.activity.homepage.phonesubwayticket.PayDialogActivity"></activity>
-        <activity android:name=".ui.activity.homepage.phonesubwayticket.RechargeSuccessActivity"></activity>
-        <activity android:name=".ui.activity.homepage.phonesubwayticket.TradingRecordActivity"></activity>
-        <activity android:name=".ui.activity.homepage.buyonline.SureBuyTicketActivity"></activity>
-        <activity android:name=".ui.activity.homepage.buyonline.BuyLineSuccessActivity"></activity>
-        <activity android:name=".ui.activity.homepage.buyonline.TicketCodeActivity"></activity>
-        <activity android:name=".ui.activity.homepage.instationguide.StandSureActivity"></activity>
-        <activity android:name=".ui.activity.homepage.around_station.StationRimSureActivity"></activity>
-        <activity android:name=".ui.activity.homepage.around_station.LandsmarkSureActivity"></activity>
-        <activity android:name=".ui.activity.homepage.SingleTicketTestActivity"></activity>
+        <activity android:name=".ui.activity.homepage.phonesubwayticket.PayDialogActivity" />
+        <activity android:name=".ui.activity.homepage.phonesubwayticket.RechargeSuccessActivity" />
+        <activity android:name=".ui.activity.homepage.phonesubwayticket.TradingRecordActivity" />
+        <activity android:name=".ui.activity.homepage.buyonline.SureBuyTicketActivity" />
+        <activity android:name=".ui.activity.homepage.buyonline.BuyLineSuccessActivity" />
+        <activity android:name=".ui.activity.homepage.buyonline.TicketCodeActivity" />
+        <activity android:name=".ui.activity.homepage.instationguide.StandSureActivity" />
+        <activity android:name=".ui.activity.homepage.around_station.StationRimSureActivity" />
+        <activity android:name=".ui.activity.homepage.around_station.LandsmarkSureActivity" />
+        <activity android:name=".ui.activity.homepage.SingleTicketTestActivity" />
+        <activity android:name=".ui.activity.homepage.CardRecordActivity"></activity>
     </application>
 
 </manifest>

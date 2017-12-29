@@ -17,5 +17,7 @@
     <string name="about_me">关于我们</string>
     <string name="clear_cash">清除缓存</string>
     <string name="nfc_sensing_area">NFC感应区</string>
+    <string name="card_recharge">卡片充值</string>
+    <string name="nfc_card_charge_recodes">充值记录</string>
     <string name="attach_the_card_to_the_back_of_the_phone_inquire">请将卡片贴在手机感应区</string>
 </resources>
